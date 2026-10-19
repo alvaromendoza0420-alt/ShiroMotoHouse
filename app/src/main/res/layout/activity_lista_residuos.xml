@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/shiro_black_bg"
+    tools:context=".ui.ListaResiduosActivity">
+
+    <TextView
+        android:id="@+id/tvTituloListaResiduos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Historial de Residuos"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/shiro_orange_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvResumenTotales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aceite reciclado: 0 Litros\nBaterías recicladas: 0 Unidades"
+        android:textSize="14sp"
+        android:textColor="@color/shiro_white"
+        android:background="@color/shiro_black_surface"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloListaResiduos"
+        android:layout_marginTop="12dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvResiduos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResumenTotales"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/tvVacioResiduos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No hay residuos registrados"
+        android:textSize="16sp"
+        android:textColor="@color/shiro_text_gray"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvResumenTotales"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAgregarResiduo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        android:backgroundTint="@color/shiro_orange_primary"
+        app:tint="@color/shiro_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

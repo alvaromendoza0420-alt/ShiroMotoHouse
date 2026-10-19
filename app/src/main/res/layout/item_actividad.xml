@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@color/shiro_black_surface">
+
+    <TextView
+        android:id="@+id/tvItemTipoActividad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cambio de Aceite"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/shiro_orange_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvItemEmpleado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Empleado: Juan Pérez"
+        android:textSize="13sp"
+        android:textColor="@color/shiro_white"
+        app:layout_constraintTop_toBottomOf="@id/tvItemTipoActividad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tvItemPlacaActividad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Moto: ABC-123"
+        android:textSize="13sp"
+        android:textColor="@color/shiro_text_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvItemEmpleado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/tvItemFechaActividad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Fecha: 21/09/2026"
+        android:textSize="12sp"
+        android:textColor="@color/shiro_text_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvItemPlacaActividad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tvItemEstadoActividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finalizado"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        app:layout_constraintTop_toBottomOf="@id/tvItemFechaActividad"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

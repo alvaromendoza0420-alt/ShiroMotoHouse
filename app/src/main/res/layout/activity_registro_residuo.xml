@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shiro_black_bg"
+    tools:context=".ui.RegistroResiduoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTituloResiduo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registro de Residuos (ODS 12)"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/shiro_orange_primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvSubtituloResiduo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestión responsable de aceites, baterías y neumáticos"
+            android:textSize="13sp"
+            android:textColor="@color/shiro_text_gray"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloResiduo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTipoResiduo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de Residuo"
+            app:hintTextColor="@color/shiro_text_gray"
+            app:boxStrokeColor="@color/shiro_orange_primary"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtituloResiduo"
+            android:layout_marginTop="24dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/actTipoResiduo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/shiro_white"
+                android:inputType="none"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCantidad"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cantidad"
+            app:hintTextColor="@color/shiro_text_gray"
+            app:boxStrokeColor="@color/shiro_orange_primary"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tilTipoResiduo"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/shiro_white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilObservaciones"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Observaciones (opcional)"
+            app:hintTextColor="@color/shiro_text_gray"
+            app:boxStrokeColor="@color/shiro_orange_primary"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tilCantidad"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etObservaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:textColor="@color/shiro_white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnGuardarResiduo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="GUARDAR REGISTRO"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/shiro_orange_primary"
+            android:textColor="@color/shiro_white"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tilObservaciones"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

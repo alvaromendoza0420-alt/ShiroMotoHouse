@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@color/shiro_black_surface">
+
+    <TextView
+        android:id="@+id/tvItemPlaca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ABC-123"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/shiro_orange_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvItemPropietario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Propietario: Juan Pérez"
+        android:textSize="14sp"
+        android:textColor="@color/shiro_white"
+        app:layout_constraintTop_toBottomOf="@id/tvItemPlaca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tvItemTelefono"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Teléfono: 987654321"
+        android:textSize="13sp"
+        android:textColor="@color/shiro_text_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvItemPropietario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/tvItemModelo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Modelo: Honda CB190"
+        android:textSize="13sp"
+        android:textColor="@color/shiro_text_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvItemTelefono"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="2dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
